@@ -19,7 +19,11 @@ const chercherPokemonSansID = async (req, res) => {
         res.send(listePokemons);
     })
     .catch((erreur) => {
-
+        console.log('Erreur: ', erreur);
+        res.status(500);
+        res.send({
+            message: "Erreur lors de la récupération des pokémons"
+        });
     })
 }
 
