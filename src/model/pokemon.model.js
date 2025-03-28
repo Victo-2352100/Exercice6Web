@@ -1,4 +1,4 @@
-import db from '../db.js'
+import db from '../pg_db.js'
 
 const trouverPokemon = (id) => {
     return new Promise((resolve, reject) => {
